@@ -3,10 +3,10 @@ Rails.application.routes.draw do
   root to: "pages#home"
 
   resources :items, only: [:index, :new, :create] do
-    collection do
-      get :miscellaneous
-      get :beverages
-      get :entertainment
+    # collection do
+    #   get :miscellaneous
+    #   get :beverages
+    #   get :entertainment
       # Add more categories here as needed
     end
   end
