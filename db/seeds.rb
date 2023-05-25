@@ -1,3 +1,10 @@
+puts "Clearing database"
+User.destroy_all
+Item.destroy_all
+
+puts "Creating seeds"
+User.create!(name:"Bob Sagat", email:"bob@gmail.com", password:"password", phone_number:"1234567", bio:"Bob likes stuff")
+
 Item.create(
   name: "Inflatable Castle",
   address: " 11111 Moon, Outer Space",
@@ -42,7 +49,7 @@ Item.create(
   user: User.first # Replace with the appropriate user association
 )
 
-
+puts "#{Item.count} items created"
 
 # This file should contain all the record creation needed to seed the database with its default values.
 # The data can then be loaded with the bin/rails db:seed command (or created alongside the database with db:setup).
