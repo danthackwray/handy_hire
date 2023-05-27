@@ -5,7 +5,7 @@ class ItemsController < ApplicationController
 
   def show
     @item = Item.find(params[:id])
-    @review = Review.new
+    # @review = Review.new
   end
 
   def new
@@ -41,4 +41,3 @@ end
   # def entertainment
   #   @items = Item.where(category: "entertainment")
   # end
-
