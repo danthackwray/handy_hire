@@ -8,18 +8,6 @@ class ItemsController < ApplicationController
     @review = Review.new
   end
 
-  def miscellaneous
-    @items = Item.where(category: "miscellaneous")
-  end
-
-  def beverages
-    @items = Item.where(category: "beverages")
-  end
-
-  def entertainment
-    @items = Item.where(category: "entertainment")
-  end
-
   def new
     @item = Item.new
   end
@@ -39,3 +27,17 @@ class ItemsController < ApplicationController
     params.require(:item).permit(:name, :address, :price, :category, :user_id)
   end
 end
+
+
+  # def miscellaneous
+  #   @items = Item.where(category: "miscellaneous")
+  # end
+
+  # def beverages
+  #   @items = Item.where(category: "beverages")
+  # end
+
+  # def entertainment
+  #   @items = Item.where(category: "entertainment")
+  # end
+
