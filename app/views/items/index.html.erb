@@ -1,6 +1,5 @@
-<% @items.each do |item| %>
-<%= item.name %>
-<%= item.description%>
-<%= item.price %>
-<p><%= link_to "View Item", item_path(item) %></p>
-<% end %>
+<div class="cards d-grid p-2">
+      <%  @items.each do |item| %>
+        <%= render "items/card", item: item %>
+      <% end %>
+    </div>
