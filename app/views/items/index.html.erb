@@ -1,19 +1,6 @@
-<div class="container">
-  <h1>Items</h1>
+<div class="cards d-grid p-2">
+      <%  @items.each do |item| %>
+        <%= render "items/card", item: item %>
+      <% end %>
+    </div>
 
-  <div class="row">
-    <% @items.each do |item| %>
-      <div class="col-md-4">
-        <div class="card mb-4">
-          <img src="<%= item.image_url insert the item url in here after the . %>" class="card-img-top" alt="Item Image">
-          <div class="card-body">
-            <h5 class="card-title"><%= item.name %></h5>
-            <p class="card-text"><%= item.description %></p>
-            <p class="card-price">Price: <%= item.price %></p>
-            <a href="<%= item_path(item) %>" class="btn btn-primary">View Details</a>
-          </div>
-        </div>
-      </div>
-    <% end %>
-  </div>
-</div>
