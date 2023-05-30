@@ -3,7 +3,7 @@
 <p><strong>Price:</strong> <%= @item.price %></p>
 <h3>Book this item</h3>
       <%= simple_form_for [@item, @booking] do |f| %>
-        <%= f.input :start_date, as: :date %>
-        <%= f.input :end_date, as: :date %>
+        <%= f.input :start_date, as: :date, html5: true, input_html:{value: Date.today}  %>
+        <%= f.input :end_date, as: :date, html5: true, input_html:{value: Date.today} %>
         <%= f.submit %>
       <% end %>
