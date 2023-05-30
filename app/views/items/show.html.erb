@@ -1,3 +1,9 @@
 <h1><%= @item.name %></h1>
 <p><strong>Description:</strong> <%= @item.description %></p>
 <p><strong>Price:</strong> <%= @item.price %></p>
+<h3>Book this item</h3>
+      <%= simple_form_for [@item, @booking] do |f| %>
+        <%= f.input :start_date, as: :date %>
+        <%= f.input :end_date, as: :date %>
+        <%= f.submit %>
+      <% end %>

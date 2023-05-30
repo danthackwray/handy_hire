@@ -1,10 +1,16 @@
-<h1>Create a New Item</h1>
-
-<%= simple_form_for @item, url: items_path do |f| %>
-  <%= f.input :name %>
-  <%= f.input :description %>
-  <%= f.input :address %>
-  <%= f.input :price %>
-  <%= f.button :submit %>
-<% end %>
-git
+<div class="container py-5">
+  <div class="row">
+    <div class="col-12 col-md-6 offset-lg-3">
+      <div class="bg-white rounded p-3 shadow">
+        <h3>Add your new item</h3>
+        <%= simple_form_for @item do |f| %>
+          <%= f.input :name, placeholder: 'My amazing item' %>
+          <%= f.input :address, placeholder: '18 Clarievaux road, Kalk bay , Cape Town' %>
+          <%= f.input :price, placeholder: 'Plitemease insert a daily rate in Euros' %>
+          <%= f.input :description, placeholder: 'Tell us about your work item and why we would like to work there..' %>
+          <%= f.submit class: 'btn-primary' %>
+        <% end %>
+      </div>
+    </div>
+  </div>
+</div>
