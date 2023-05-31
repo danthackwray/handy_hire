@@ -22,7 +22,7 @@ Item.create(
 )
 
 Item.create(
-  name: "Giggle Generator 3000",
+  name: "Giggle Generator",
   address: "101 Laughter Land, Wonderland",
   description: "Need a dose of laughter? Rent the Giggle Generator 3000! This tickle-inducing device emits an infectious giggle that will turn any frown upside down. Warning: Uncontrollable laughter and excessive cheerfulness may occur.",
   price: 40,
@@ -37,7 +37,7 @@ Item.create(
 )
 
 Item.create(
-  name: "SnuggleMaster 3000",
+  name: "SnuggleMaster",
   address: "42 Wacky Way, Giggleton",
   description: "Experience the warm and fuzzy embrace of this robotic cuddle buddy! With its patented SnuggleSense™ technology, it offers the perfect cuddle every time, complete with customizable cuddle intensity settings and an optional snore simulation feature. Get ready for a snuggle revolution!",
   price: 250,
