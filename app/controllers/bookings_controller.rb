@@ -19,7 +19,7 @@ class BookingsController < ApplicationController
     @booking.item = @item
 
     if @booking.save
-      redirect_to booking_path(@booking)
+      redirect_to item_booking_path(@item, @booking) #direct user to page saying that bookings is confirmed
     else
       render :new, status: :unprocessable_entity
     end
