@@ -1,5 +1,5 @@
 class ApplicationController < ActionController::Base
-  before_action :authenticate_user!, only: :home
+  before_action :authenticate_user!, except: :index
   def home
   end
 end
