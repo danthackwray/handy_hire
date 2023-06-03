@@ -13,7 +13,7 @@ Item.create(
   user: User.all.sample# Replace with the appropriate user association
 )
 
-Item.create(
+Item.create(cp
   name: "Pogo Stick Deluxe",
   address: "66 Fairyland, Cloud Nine",
   description: "Soar to new heights with this magical pogo stick! Bounce among fluffy clouds and explore the enchanting realms of Fairyland. Fairies and unicorns not included, but you may stumble upon some pixie dust and magic beans along the way!",
