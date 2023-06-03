@@ -4,6 +4,7 @@
       <div class="bg-white rounded p-3 shadow">
         <h3>Add your new item</h3>
         <%= simple_form_for @item do |f| %>
+          <%= f.input :photo, as: :file %>
           <%= f.input :name, placeholder: 'My amazing item' %>
           <%= f.input :address, placeholder: '711 Lucky Way road, City of Gold' %>
           <%= f.input :price, placeholder: 'Rand value' %>
