@@ -1,21 +1,27 @@
 .banner {
+  width: 100%;
   background-size: contain;
-  background-position: center;
+  background-position: cover;
   padding: 150px 0;
   font-family: 'Ubuntu', sans-serif;
 }
 
 .banner h1 {
-  margin: 0;
-  color: white;
-  text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
-  font-size: 32px;
-  font-weight: bold;
+margin: 0;
+color: white;
+text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+font-size: 65px;
+font-weight: bold;
+text-align: center;
+border-radius: 20px;
+font-family: 'Lobster', cursive;
+letter-spacing: 4px;
 }
 
 .banner p {
   font-size: 20px;
   color: white;
   opacity: .7;
+  text-align: center;
   text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
 }

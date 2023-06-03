@@ -5,9 +5,7 @@ class ItemsController < ApplicationController
     else
       @items = Item.all
     end
-   end
-
-
+  end
 
   def show
     @item = Item.find(params[:id])
@@ -35,7 +33,6 @@ class ItemsController < ApplicationController
     params.require(:item).permit(:name, :description, :address, :price, :user_id)
   end
 end
-
 
   # def miscellaneous
   #   @items = Item.where(category: "miscellaneous")

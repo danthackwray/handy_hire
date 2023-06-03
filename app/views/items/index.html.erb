@@ -1,26 +1,26 @@
 
+<div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://rentitems.com/assets/images/rent-items-social-media.png);">
+  <h1>HANDY HIRE</h1>
+  <p>Handy Hire is your one stop shop for renting all sorts of items.</p>
+</div>
+
 <div class="row justify-content-center">
-  <div class="col-sm-8 my-3">
+  <div class="col-sm-8 my-4">
     <%= form_with url: items_path, method: :get, class: "d-flex" do %>
       <%= text_field_tag :query,
             params[:query],
             class: "form-control",
-<            placeholder: "Find an item"
+            placeholder: "Find an item"
         %>
       <%= submit_tag "Search", name: "", class: "btn btn-primary" %>
     <% end %>
   </div>
 </div>
 
-<div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://rentitems.com/assets/images/rent-items-social-media.png);">
-  <div class="container">
-    <h1>HANDY HIRE</h1>
-    <p>Handy Hire is your one stop shop for renting all sorts of items.</p>
-  </div>
-</div>
-
-<div class="cards d-grid p-2">
+<div class="container">
+ <div class="cards d-grid p-2">
       <%  @items.each do |item| %>
         <%= render "items/card", item: item %>
       <% end %>
-    </div>
+ </div>
+</div>

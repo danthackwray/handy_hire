@@ -8,14 +8,15 @@
 
     <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
     <%= javascript_include_tag "application", "data-turbo-track": "reload", defer: true %>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Alkatra:wght@400;600&family=Lobster&family=Noto+Sans:ital,wght@1,500&family=PT+Sans:ital,wght@0,700;1,400;1,700&family=Source+Serif+Pro:wght@300&family=Ubuntu:wght@300&display=swap" rel="stylesheet">
   </head>
 
   <body>
     <%= render "shared/navbar" %>
-      <div class="container">
-       <%= yield %>
-      </div>
-    <%= render "shared/flashes" %>
+     <%= yield %>
+         <%= render "shared/flashes" %>
     <%= render "shared/footer" %>
   </body>
 </html>
