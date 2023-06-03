@@ -62,6 +62,16 @@ file = URI.open("https://res.cloudinary.com/doavhfhmx/image/upload/v1685783603/0
 item5.photo.attach(io: file, filename: "Surfing Unicorn", content_type: "photo/png")
 item5.save
 
+item6 = Item.create(
+  name: "A new branch",
+  address: "42 Mountain, The Mountains",
+  description: "Experience a new branch when your current branch is toxic",
+  price: 250,
+  user: User.all.sample # Replace with the appropriate user association
+)
+file = URI.open("https://res.cloudinary.com/doavhfhmx/image/upload/v1684411325/samples/landscapes/nature-mountains.jpg")
+item6.photo.attach(io: file, filename: "A new branch", content_type: "photo/png")
+item6.save
 puts "#{Item.count} items created"
 
 # This file should contain all the record creation needed to seed the database with its default values.
