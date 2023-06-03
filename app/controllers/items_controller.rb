@@ -23,6 +23,12 @@ class ItemsController < ApplicationController
     end
   end
 
+  def destroy
+    @item = Item.new(item_params)
+    @item.destroy
+    redirect_to items_path, status: :see_other
+  end
+
   private
 
   def item_params

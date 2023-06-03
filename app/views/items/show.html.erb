@@ -7,3 +7,9 @@
         <%= f.input :end_date, as: :date, html5: true, input_html:{value: Date.today} %>
         <%= f.submit %>
       <% end %>
+
+
+<%= link_to "Delete",
+  item_path(@item),
+  data: {turbo_method: :delete, turbo_confirm: "Are you sure?"}
+%>
