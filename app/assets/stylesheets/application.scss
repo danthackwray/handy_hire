@@ -10,7 +10,8 @@
 // Your CSS partials
 @import "components/index";
 @import "pages/index";
-
+@import "components/button";
+@import "components/alert";
 
 body {
   background-color: rgb(126, 153, 226);
