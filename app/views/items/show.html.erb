@@ -9,9 +9,9 @@
       <% end %>
 
 
+<button><% if current_user == @item.user %>
+  <%= link_to "Delete", item_path(@item), method: :delete, data: { turbo_frame: "_top" } %>
+<% end %></button>
 
-
-<button><%= link_to "Delete",
-  item_path(@item),
-  data: {turbo_method: :delete, turbo_confirm: "Are you sure?"}
-%></button>
+<button><%= link_to "Edit Item",
+  item_path(@item) %></button>

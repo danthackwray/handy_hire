@@ -29,10 +29,22 @@ class ItemsController < ApplicationController
     end
   end
 
+  def edit
+    @item = Item.find(params[:id])
+  end
+
+  def update
+    @item = item.find(params[:id])
+    @item.update(item_params)
+
+    redirect_to item_path(@item)
+  end
+
+
   def destroy
-    @item = Item.new(item_params)
+    @item = Item.find(params[:id])
     @item.destroy
-    redirect_to items_path, status: :see_other
+    redirect_to items_path, notice: "item deleted succesfully"
   end
 
   private
