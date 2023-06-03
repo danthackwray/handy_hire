@@ -18,36 +18,49 @@ file = URI.open("https://res.cloudinary.com/doavhfhmx/image/upload/v1685783434/9
 item1.photo.attach(io: file, filename: "inflatable castle", content_type: "photo/png")
 item1.save
 
-Item.create(
-  name: "Pogo Stick Deluxe",
+item2 = Item.create(
+  name: "Emotional Support Dog for final project",
   address: "66 Fairyland, Cloud Nine",
-  description: "Soar to new heights with this magical pogo stick! Bounce among fluffy clouds and explore the enchanting realms of Fairyland. Fairies and unicorns not included, but you may stumble upon some pixie dust and magic beans along the way!",
+  description: "Feel the the soft wet nose of a sweet Dalmation tickling your cheek to make you giggle and relax",
   price: 75,
   user: User.all.sample# Replace with the appropriate user association
 )
+file = URI.open("https://res.cloudinary.com/doavhfhmx/image/upload/v1684411335/cld-sample.jpg")
+item2.photo.attach(io: file, filename: "Emotional Support Dog for when you are coding", content_type: "photo/png")
+item2.save
 
-Item.create(
+item3 = Item.create(
   name: "Flying carpet",
   address: "101 Laughter Land, Wonderland",
   description: "Need a dose of laughter? Rent the Giggle Generator 3000! This tickle-inducing device emits an infectious giggle that will turn any frown upside down. Warning: Uncontrollable laughter and excessive cheerfulness may occur.",
   price: 40,
   user: User.all.sample# Replace with the appropriate user association
 )
-Item.create(
+file = URI.open("https://res.cloudinary.com/doavhfhmx/image/upload/v1685783559/22ebd7d5-d02c-4af3-89f1-7f1f0a64ea96_zkhmdh.png")
+item3.photo.attach(io: file, filename: "Flying Carpet", content_type: "photo/png")
+item3.save
+
+item4 = Item.create(
   name: "Bubbledome",
   address: "23 Quizzical Lane, Eccentricville",
   description: "Feeling a little too ordinary? Time to quench that thirst for quirkiness with the QuirkQuencher! This zany invention turns regular drinks into peculiar potions, infusing them with an extra dose of whimsy. From rainbow-colored lemonade to fizzy sherbet sodas, the QuirkQuencher takes your sips to a whole new level of quirkiness!",
   price: 175,
   user: User.all.sample# Replace with the appropriate user association
 )
+file = URI.open("https://res.cloudinary.com/doavhfhmx/image/upload/v1685783551/07324083-8012-4ebc-b66b-f93e0c8e130b_oshdv0.png")
+item4.photo.attach(io: file, filename: "Bubbledome", content_type: "photo/png")
+item4.save
 
-Item.create(
+item5 = Item5.create(
   name: "Surfing Unicorn",
   address: "42 Wacky Way, Giggleton",
   description: "Experience the warm and fuzzy embrace of this robotic cuddle buddy! With its patented SnuggleSense™ technology, it offers the perfect cuddle every time, complete with customizable cuddle intensity settings and an optional snore simulation feature. Get ready for a snuggle revolution!",
   price: 250,
   user: User.all.sample # Replace with the appropriate user association
 )
+file = URI.open("https://res.cloudinary.com/doavhfhmx/image/upload/v1685783603/047a3c1e-9b32-4782-843f-4fa3db12bbbd_c57bmc.png")
+item5.photo.attach(io: file, filename: "Surfing Unicorn", content_type: "photo/png")
+item5.save
 
 puts "#{Item.count} items created"
 
