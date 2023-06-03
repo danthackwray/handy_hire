@@ -1,17 +1,22 @@
+require "open-uri"
 puts "Clearing database"
+Booking.destroy_all
 Item.destroy_all
 User.destroy_all
 
 puts "Creating seeds"
 User.create!(name: "Bob Sagat", email: "bob@gmail.com", password: "password", phone_number:"1234567", bio: "Bob likes stuff")
 
-Item.create(
+item1 = Item.create(
   name: "Inflatable Castle",
   address: " 11111 Moon, Outer Space",
   description: "Take your party to new heights with this gravity-defying inflatable castle on the moon! Bounce around in zero gravity while enjoying stunning views of the Earth. Moonwalks, alien encounters, and lunar selfies guaranteed!",
   price: 250,
   user: User.all.sample# Replace with the appropriate user association
 )
+file = URI.open("https://res.cloudinary.com/doavhfhmx/image/upload/v1685783434/93677fcf-1428-4a07-86a1-0b370a9db068_cozcgy.png")
+item1.photo.attach(io: file, filename: "inflatable castle", content_type: "photo/png")
+item1.save
 
 Item.create(
   name: "Pogo Stick Deluxe",
@@ -22,14 +27,14 @@ Item.create(
 )
 
 Item.create(
-  name: "Giggle Generator 3000",
+  name: "Flying carpet",
   address: "101 Laughter Land, Wonderland",
   description: "Need a dose of laughter? Rent the Giggle Generator 3000! This tickle-inducing device emits an infectious giggle that will turn any frown upside down. Warning: Uncontrollable laughter and excessive cheerfulness may occur.",
   price: 40,
   user: User.all.sample# Replace with the appropriate user association
 )
 Item.create(
-  name: "QuirkQuencher",
+  name: "Bubbledome",
   address: "23 Quizzical Lane, Eccentricville",
   description: "Feeling a little too ordinary? Time to quench that thirst for quirkiness with the QuirkQuencher! This zany invention turns regular drinks into peculiar potions, infusing them with an extra dose of whimsy. From rainbow-colored lemonade to fizzy sherbet sodas, the QuirkQuencher takes your sips to a whole new level of quirkiness!",
   price: 175,
@@ -37,7 +42,7 @@ Item.create(
 )
 
 Item.create(
-  name: "SnuggleMaster 3000",
+  name: "Surfing Unicorn",
   address: "42 Wacky Way, Giggleton",
   description: "Experience the warm and fuzzy embrace of this robotic cuddle buddy! With its patented SnuggleSense™ technology, it offers the perfect cuddle every time, complete with customizable cuddle intensity settings and an optional snore simulation feature. Get ready for a snuggle revolution!",
   price: 250,

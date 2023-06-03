@@ -4,10 +4,11 @@
       <div class="bg-white rounded p-3 shadow">
         <h3>Add your new item</h3>
         <%= simple_form_for @item do |f| %>
+          <%= f.input :photo, as: :file %>
           <%= f.input :name, placeholder: 'My amazing item' %>
-          <%= f.input :address, placeholder: '18 Clarievaux road, Kalk bay , Cape Town' %>
-          <%= f.input :price, placeholder: 'Plitemease insert a daily rate in Euros' %>
-          <%= f.input :description, placeholder: 'Tell us about your work item and why we would like to work there..' %>
+          <%= f.input :address, placeholder: '711 Lucky Way road, City of Gold' %>
+          <%= f.input :price, placeholder: 'Rand value' %>
+          <%= f.input :description, placeholder: 'Tell us about your item and why you would like it' %>
           <%= f.submit class: 'btn-primary' %>
         <% end %>
       </div>
