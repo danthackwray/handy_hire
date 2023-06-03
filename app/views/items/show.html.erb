@@ -7,3 +7,11 @@
         <%= f.input :end_date, as: :date, html5: true, input_html:{value: Date.today} %>
         <%= f.submit %>
       <% end %>
+
+
+<button><% if current_user == @item.user %>
+  <%= link_to "Delete", item_path(@item), method: :delete, data: { turbo_frame: "_top" } %>
+<% end %></button>
+
+<button><%= link_to "Edit Item",
+  item_path(@item) %></button>
