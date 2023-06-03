@@ -51,7 +51,7 @@ file = URI.open("https://res.cloudinary.com/doavhfhmx/image/upload/v1685783551/0
 item4.photo.attach(io: file, filename: "Bubbledome", content_type: "photo/png")
 item4.save
 
-item5 = Item5.create(
+item5 = Item.create(
   name: "Surfing Unicorn",
   address: "42 Wacky Way, Giggleton",
   description: "Experience the warm and fuzzy embrace of this robotic cuddle buddy! With its patented SnuggleSense™ technology, it offers the perfect cuddle every time, complete with customizable cuddle intensity settings and an optional snore simulation feature. Get ready for a snuggle revolution!",
