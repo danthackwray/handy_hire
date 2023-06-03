@@ -1,7 +1,13 @@
 class ItemsController < ApplicationController
   def index
-    @items = Item.all
-  end
+    if params[:query].present?
+      @items = Item.search_by_name_and_description (params[:query])
+    else
+      @items = Item.all
+    end
+   end
+
+
 
   def show
     @item = Item.find(params[:id])
