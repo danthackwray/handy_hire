@@ -5,11 +5,11 @@ User.destroy_all
 puts "Creating seeds"
 User.create!(name: "Bob Sagat", email: "bob@gmail.com", password: "password", phone_number:"1234567", bio: "Bob likes stuff")
 
-Item.create(
+Item.create('
   name: "Inflatable Castle",
   address: " 11111 Moon, Outer Space",
   description: "Take your party to new heights with this gravity-defying inflatable castle on the moon! Bounce around in zero gravity while enjoying stunning views of the Earth. Moonwalks, alien encounters, and lunar selfies guaranteed!",
-  price: 250,
+  price: 250,'
   user: User.all.sample# Replace with the appropriate user association
 )
 
